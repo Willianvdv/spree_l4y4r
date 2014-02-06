@@ -4,7 +4,9 @@ class UserService
   end
 
   def push
-    client.post 'users', { identifier: @user.email }
+    layer_client = client.post 'users', { identifier: @user.email }
+    @user.layer_id = layer_client['id']
+    @user.save!
   end
 
   private 
