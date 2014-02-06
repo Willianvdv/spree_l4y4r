@@ -16,12 +16,12 @@ describe UserService do
     it 'client receives user with arguments' do
       user_params = { identifier: user.email }
       client.should_receive(:post).with("users", user_params).and_return(client_json)
-      subject.push
+      subject.push_to_layer
     end
 
     it 'stores layers user id to user' do
       client.stub(:post).and_return(client_json)
-      subject.push
+      subject.push_to_layer
       expect(user.layer_id).to eq(magical_layer_id)
     end
   end

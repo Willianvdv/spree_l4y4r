@@ -3,7 +3,7 @@ class UserService
     @user = user
   end
 
-  def push
+  def push_to_layer
     layer_client = client.post 'users', { identifier: @user.email }
     @user.layer_id = layer_client['id']
     @user.save!
