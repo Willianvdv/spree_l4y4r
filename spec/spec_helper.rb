@@ -78,5 +78,8 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.include Spree::TestingSupport::ControllerRequests
+  config.include Spree::TestingSupport::UrlHelpers
+  
   config.fail_fast = ENV['FAIL_FAST'] || false
 end
