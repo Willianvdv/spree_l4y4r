@@ -1,4 +1,4 @@
-class EventService
+class EventService < BaseService
   def initialize(product, user, type)
     @product = product
     @user = user
@@ -6,5 +6,6 @@ class EventService
   end
 
   def push_to_layer
+
   end
 end
