@@ -1,0 +1,8 @@
+script:
+  - bundle exec rake test_app
+  - bundle exec rspec spec
+rvm:
+  - 1.9.3
+notifications:
+  hipchat:
+    secure: "UWCRjuwpiHlyXZqQjbtK0PAj3z5IN8dvZpcpD18RW7RJ9X5zLP5fjtdjFKuprmN4kFkltIkF3dnvGxi4OSPktIjEVjnVPQumOhznXKhMOCP3WeuRFfHzZHKiLFmIebjGGGKlKzJ3uqvIVd9dITvQG5HCryD4YPQEOntpM4Ygbuc="
